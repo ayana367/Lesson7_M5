@@ -38,5 +38,4 @@ class Math {
 
     fun String.isNumbers():Boolean{
         return this.matches(Regex("[+-]?\\d*(\\.\\d+)?"))}
-
 }

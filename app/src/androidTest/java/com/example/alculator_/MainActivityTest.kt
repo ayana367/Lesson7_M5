@@ -52,4 +52,3 @@ import org.junit.runner.RunWith
         onView(withId(R.id.calc_tv)).check(matches(withText("kalculator")))
     }
 }
-
