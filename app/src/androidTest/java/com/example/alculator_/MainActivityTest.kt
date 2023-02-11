@@ -25,26 +25,26 @@ import org.junit.runner.RunWith
     }
     @Test
     fun divide(){
-        onView(withId(R.id.calc_first_edt)).perform(typeText("4"))
+        onView(withId(R.id.calc_first_edt)).perform(typeText("10"))
         onView(withId(R.id.calc_second_edt)).perform(typeText("2"), closeSoftKeyboard())
-        onView(withId(R.id.add)).perform(click())
-        onView(withId(R.id.calc_result_tv)).check(matches(withText("2")))
+        onView(withId(R.id.btn_divide)).perform(click())
+        onView(withId(R.id.calc_result_tv)).check(matches(withText("5")))
     }
 
     @Test
     fun minus(){
-        onView(withId(R.id.calc_first_edt)).perform(typeText("1"))
+        onView(withId(R.id.calc_first_edt)).perform(typeText("5"))
         onView(withId(R.id.calc_second_edt)).perform(typeText("2"), closeSoftKeyboard())
-        onView(withId(R.id.add)).perform(click())
-        onView(withId(R.id.calc_result_tv)).check(matches(withText("-1")))
+        onView(withId(R.id.btn_minus)).perform(click())
+        onView(withId(R.id.calc_result_tv)).check(matches(withText("3")))
     }
 
     @Test
     fun multiply(){
-        onView(withId(R.id.calc_first_edt)).perform(typeText("3"))
+        onView(withId(R.id.calc_first_edt)).perform(typeText("12"))
         onView(withId(R.id.calc_second_edt)).perform(typeText("2"), closeSoftKeyboard())
-        onView(withId(R.id.add)).perform(click())
-        onView(withId(R.id.calc_result_tv)).check(matches(withText("6")))
+        onView(withId(R.id.btn_multiply)).perform(click())
+        onView(withId(R.id.calc_result_tv)).check(matches(withText("24")))
     }
 
     @Test

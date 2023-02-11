@@ -13,28 +13,26 @@ class MathTest {
     }
     @Test
     fun add(){
-        math?.add("2","2")
-        math?.add("1","1")
+       Assert.assertEquals("4",math?.add("2","2"))
     }
 
     @Test(expected = ArithmeticException::class)
     fun divide(){
-        math?.divide("0","8")
+        math?.divide("10","2")
     }
 
     @Test
     fun minus(){
-        math?.minus("0","8")
+        Assert.assertEquals("3",math?.add("5","2"))
     }
 
     @Test
     fun multiply(){
-        math?.multiply("2","8")
+        Assert.assertEquals("24",math?.add("12","2"))
     }
 
     @After
     fun after(){
         math = null
     }
-
 }
